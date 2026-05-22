@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Data Processing Engine</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <div class="header">
+      <div class="title">
+        <div class="logo">DF</div>
+        <div>
+          <h1>Data Processing Engine</h1>
+          <p class="sub">HTML · CSS · JavaScript UI · Java core logic</p>
+        </div>
+      </div>
+      <div class="mini">
+        <div class="stat">BST nodes: <span id="stat-nodes">0</span></div>
+        <div class="stat">Array: <span id="stat-array">0</span></div>
+        <div class="stat">Stack: <span id="stat-stack">0</span></div>
+      </div>
+    </div>
+
+    <div class="body">
+      <div class="controls panel">
+        <div>
+          <label for="value">Insert number</label>
+          <div class="row">
+            <input id="value" type="number" placeholder="e.g. 42" />
+            <button id="btn-insert">Insert</button>
+          </div>
+        </div>
+        <div>
+          <label>Tree traversals</label>
+          <div class="row">
+            <button id="btn-dfs" class="ghost">Animate DFS (Inorder)</button>
+            <button id="btn-bfs" class="ghost">Animate BFS (Level-order)</button>
+          </div>
+        </div>
+        <div>
+          <label>Sorting</label>
+          <div class="row">
+            <button id="btn-sort-sel" class="ghost">Selection Sort</button>
+            <button id="btn-sort-quick" class="ghost">Quick Sort</button>
+          </div>
+        </div>
+        <div>
+          <label>Other</label>
+          <div class="row">
+            <button id="btn-undo" class="ghost">Undo</button>
+            <button id="btn-clear" class="ghost">Clear</button>
+            <button id="btn-sample" class="ghost">Sample</button>
+          </div>
+        </div>
+        <div id="messages" class="output">Ready.</div>
+      </div>
+
+      <div class="panel">
+        <h3 style="margin-top:0">BST Visualizer</h3>
+        <div class="tree-wrap" id="tree-wrap">
+          <div class="tree-empty" id="tree-empty">Insert values or load sample.</div>
+          <svg id="tree-svg" aria-label="Binary search tree"></svg>
+        </div>
+        <div class="algo-row">
+          <label>DFS (inorder)</label>
+          <div id="out-inorder" class="output">(empty)</div>
+        </div>
+        <div class="algo-row">
+          <label>BFS (level-order)</label>
+          <div id="out-bfs" class="output">(empty)</div>
+        </div>
+        <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:14px 0" />
+        <div class="row" style="margin-bottom:12px">
+          <div style="flex:1">
+            <label>Array</label>
+            <div id="out-array" class="output">[]</div>
+          </div>
+          <div style="flex:1">
+            <label>Stack</label>
+            <div id="out-stack" class="output">[]</div>
+          </div>
+        </div>
+        <div class="algo-row">
+          <label>Sort view</label>
+          <div id="sort-chips" class="chips"></div>
+        </div>
+        <div class="row">
+          <div style="flex:1">
+            <label>Selection sort</label>
+            <div id="out-sorted-sel" class="output">(not sorted)</div>
+          </div>
+          <div style="flex:1">
+            <label>Quick sort</label>
+            <div id="out-sorted-quick" class="output">(not sorted)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
