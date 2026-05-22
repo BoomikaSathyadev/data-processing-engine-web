@@ -1,8 +1,21 @@
 # Data Processing Engine
 
-BST, stack undo, DFS, BFS, Selection Sort, Quick Sort — **Java** console app.
+DSA web app + Java core logic.
 
-## Run
+## Tech stack
+
+| Part | Files |
+|------|--------|
+| **HTML** | `index.html` |
+| **CSS** | `style.css` |
+| **JavaScript** | `app.js` (web UI + demo) |
+| **Java** | `java/Engine.java`, `TreeNode.java`, `Main.java` |
+
+## Run web app
+
+Open `index.html` in a browser (double-click or Live Server).
+
+## Run Java (console)
 
 ```bash
 cd java
