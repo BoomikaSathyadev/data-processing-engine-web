@@ -1,17 +1,38 @@
-Data Processing Engine
-Browser-based DSA visualizer — core logic also implemented in Java.
-🔗 Live Demo: https://boomikasathyadev.github.io/data-processing-engine-web/
+# Data Processing Engine (Web)
 
-Features
-FeatureDetailsBinary Search TreeInsert, delete, live SVG tree visualizationDFS TraversalAnimated inorder traversalBFS TraversalAnimated level-order traversalStack UndoUndo last insertion using a stackSelection SortStep-by-step visual sortQuick SortRecursive sort with partition highlighting
+Interactive DSA visualization project featuring:
+- BST visualization using SVG
+- DFS & BFS traversals
+- Stack undo functionality
+- Selection Sort & Quick Sort visualizations
 
-Tech Stack
-HTML · CSS · Vanilla JavaScript · Java (core logic in java/Engine.java)
-No external libraries — all logic written from scratch.
+## Live Demo
+https://boomikasathyadev.github.io/data-processing-engine-web/
 
-Run Locally
-Browser:
-bashgit clone https://github.com/BoomikaSathyadev/data-processing-engine-web.git
-open index.html
-Java:
-bashcd java && javac *.java && java Engine
+## Tech Stack
+
+| Layer | Tech |
+|--------|------|
+| UI | HTML, CSS, JavaScript |
+| Core Logic | Java |
+| Visualization | SVG |
+
+## Run Locally
+
+```bash
+Open index.html in your browser
+```
+
+### Java Core Logic
+
+```bash
+cd java
+javac *.java
+java Engine
+```
+
+## GitHub Pages Deployment
+
+```bash
+Settings → Pages → Deploy from branch → main → /(root)
+```
