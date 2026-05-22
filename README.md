@@ -2,6 +2,12 @@
 
 DSA web app + Java core logic.
 
+# Data Processing Engine
+
+Interactive DSA visualizer — BST, DFS, BFS, Stack Undo, Selection Sort, Quick Sort.
+
+🔗 **Live Demo:** https://boomikasathyadev.github.io/data-processing-engine-web/
+
 ## Tech stack
 
 | Part | Files |
