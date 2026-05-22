@@ -1,38 +1,30 @@
-# Data Processing Engine (Web)
+# Data Processing Engine
 
-Interactive DSA visualization project featuring:
-- BST visualization using SVG
-- DFS & BFS traversals
-- Stack undo functionality
-- Selection Sort & Quick Sort visualizations
+Interactive DSA demo: BST tree, DFS & BFS, stack undo, Selection & Quick Sort.
 
-## Live Demo
-https://boomikasathyadev.github.io/data-processing-engine-web/
+**Live demo:** https://boomikasathyadev.github.io/data-processing-engine-web/
 
-## Tech Stack
+## Tech stack
 
-| Layer | Tech |
-|--------|------|
-| UI | HTML, CSS, JavaScript |
-| Core Logic | Java |
-| Visualization | SVG |
+| Part | Tech |
+|------|------|
+| Core logic + UI | **Java** (`java/Engine.java`, `App.java`, `TreePanel.java`) |
+| Browser page | **HTML** only (`index.html`) |
+| Algorithm JavaScript | **None** |
 
-## Run Locally
+Runs as `app.jar` in the browser via [CheerpJ](https://leaningtech.com/cheerpj).
 
-```bash
-Open index.html in your browser
-```
-
-### Java Core Logic
+## Build before push
 
 ```bash
 cd java
 javac *.java
-java Engine
+jar cfe ../app.jar App *.class
+cd ..
 ```
 
-## GitHub Pages Deployment
+Push: `index.html`, `app.jar`, `java/`
 
-```bash
-Settings → Pages → Deploy from branch → main → /(root)
-```
+## GitHub Pages
+
+Settings → Pages → branch **main** → folder **/(root)**

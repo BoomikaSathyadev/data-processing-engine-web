@@ -3,10 +3,7 @@ import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;
 
-/**
- * Core logic: BST, stack undo, DFS, BFS, Selection Sort, Quick Sort.
- * The browser demo (app.js) mirrors this for GitHub Pages.
- */
+/** Core logic — BST, stack, DFS, BFS, Selection Sort, Quick Sort. */
 public class Engine {
 
     private static final int MAX = 100;
@@ -68,30 +65,42 @@ public class Engine {
         return node;
     }
 
-    public List<Integer> inorderValues() {
-        List<Integer> out = new ArrayList<>();
-        inorder(root, out);
+    public List<TreeNode> inorderNodes() {
+        List<TreeNode> out = new ArrayList<>();
+        inorderNodes(root, out);
         return out;
     }
 
-    private void inorder(TreeNode node, List<Integer> out) {
+    private void inorderNodes(TreeNode node, List<TreeNode> out) {
         if (node == null) return;
-        inorder(node.left, out);
-        out.add(node.data);
-        inorder(node.right, out);
+        inorderNodes(node.left, out);
+        out.add(node);
+        inorderNodes(node.right, out);
     }
 
-    public List<Integer> bfsValues() {
+    public List<Integer> inorderValues() {
         List<Integer> out = new ArrayList<>();
+        for (TreeNode n : inorderNodes()) out.add(n.data);
+        return out;
+    }
+
+    public List<TreeNode> bfsNodes() {
+        List<TreeNode> out = new ArrayList<>();
         if (root == null) return out;
         ArrayDeque<TreeNode> q = new ArrayDeque<>();
         q.add(root);
         while (!q.isEmpty()) {
             TreeNode cur = q.remove();
-            out.add(cur.data);
+            out.add(cur);
             if (cur.left != null) q.add(cur.left);
             if (cur.right != null) q.add(cur.right);
         }
+        return out;
+    }
+
+    public List<Integer> bfsValues() {
+        List<Integer> out = new ArrayList<>();
+        for (TreeNode n : bfsNodes()) out.add(n.data);
         return out;
     }
 
@@ -133,12 +142,4 @@ public class Engine {
         return copy;
     }
 
-    public static void main(String[] args) {
-        Engine e = new Engine();
-        e.loadSample();
-        System.out.println("DFS:  " + e.inorderValues());
-        System.out.println("BFS:  " + e.bfsValues());
-        System.out.println("Sel:  " + java.util.Arrays.toString(e.selectionSort()));
-        System.out.println("Quick:" + java.util.Arrays.toString(e.quickSort()));
-    }
 }
